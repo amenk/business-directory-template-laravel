@@ -51,7 +51,7 @@ class ListingController extends Controller
 
 
         $main_categories = Category::where('parent_id', null)->get();
-        $selected_categories = $listing->categories()->select('categories.id AS id')->lists('id')->all();
+        $selected_categories = $listing->categories()->select('categories.id AS id')->pluck('id')->all();
         return view('frontend/listing/createedit', ['listing' => $listing, 'main_categories' => $main_categories, 'selected_categories' => $selected_categories, 'openingtimes' => $openingtimes]);
     }
 

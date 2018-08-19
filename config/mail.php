@@ -55,7 +55,10 @@ return [
     |
     */
 
-    'from' => ['address' => env('DEFAULT_EMAIL'), 'name' => 'Business Directory'],
+    'from' => [
+        'address' => env('DEFAULT_EMAIL'),
+        'name' => 'Business Directory'
+    ],
 
     /*
     |--------------------------------------------------------------------------
